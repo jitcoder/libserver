@@ -13,18 +13,6 @@
       "cwd": "${workspaceRoot}",
       "environment": [],
       "externalConsole": true
-    },
-    {
-      "name": "C++ Attach (GDB)",
-      "type": "cppdbg",
-      "request": "launch",
-      "targetArchitecture": "x64",
-      "program": "${workspaceRoot}/main.out",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${workspaceRoot}",
-      "environment": [],
-      "externalConsole": false
     }
   ]
 }
