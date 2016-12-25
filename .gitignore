@@ -3,3 +3,11 @@ CMakeCache.txt
 cmake_install.cmake
 Makefile
 main
+GPATH
+GRTAGS
+GTAGS
+.cmaketools.json
+compile_commands.json
+CMakeToolsHelpers.cmake
+InitializeCache.cmake
+CMakeLists.txt.user

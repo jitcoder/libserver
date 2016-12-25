@@ -1,7 +1,25 @@
 {
-  "version": "0.1.0",
-  "command": "make",
-  "isShellCommand": true,
-  "args": [],
-  "showOutput": "always"
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "sh",
+    "isShellCommand": true,
+    "args": ["-c"],
+    "options": {
+        "cwd": "${workspaceRoot}/build"
+    },
+    "showOutput": "always",
+    "tasks": [
+        {
+            "taskName": "cmake",
+            "args": [
+                "cmake ."
+            ]
+        },
+        {
+            "taskName": "make",
+            "args": ["make"],
+            "isBuildCommand": true
+        }
+    ]
 }

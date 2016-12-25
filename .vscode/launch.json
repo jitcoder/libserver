@@ -6,11 +6,11 @@
       "type": "cppdbg",
       "request": "launch",
       "targetArchitecture": "x64",
-      "program": "${workspaceRoot}/main",
+      "program": "${workspaceRoot}/build/main",
       "args": [],
       "preLaunchTask": "make",
       "stopAtEntry": false,
-      "cwd": "${workspaceRoot}",
+      "cwd": "${workspaceRoot}/build",
       "environment": [],
       "externalConsole": true
     }
