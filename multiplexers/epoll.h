@@ -1,5 +1,6 @@
 #ifndef EPOLL
 #define EPOLL
+
 #include <sys/epoll.h>
 
 struct epoll_event ev;
@@ -14,7 +15,7 @@ int create_loop()
 void register_socket(int loop_descriptor, int sockd)
 {
   ev.data.fd = sockd;
-  ev.data.events = EPOLLIN | EPOLLET;
+  ev.events = EPOLLIN | EPOLLET;
   epoll_ctl(loop_descriptor, EPOLL_CTL_ADD, sockd, &ev);
 }
 

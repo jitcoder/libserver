@@ -8,6 +8,19 @@
 #include <string.h>
 #include <fcntl.h>
 
+int setnonblocking(int fd)
+{
+  int opts = fcntl(fd, F_GETFL);
+  if (opts < 0)
+    return -1;
+
+  opts = opts | O_NONBLOCK;
+
+  int result = fcntl(fd, F_SETFL, opts);
+  if (result < 0)
+    return -1;
+}
+
 int create_listener(char *ipaddress, int port)
 {
   struct sockaddr_in address;
@@ -48,17 +61,4 @@ int create_listener(char *ipaddress, int port)
   return fd;
 }
 
-int inline setnonblocking(int fd)
-{
-
-  int opts = fcntl(fd, F_GETFL);
-  if (opts < 0)
-    return -1;
-
-  opts = opts | O_NONBLOCK;
-
-  int result = fcntl(fd, F_SETFL, opts);
-  if (result < 0)
-    return -1;
-}
 #endif
